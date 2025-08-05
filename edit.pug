@@ -1,0 +1,26 @@
+extends layout
+block content
+  h2 Edit Employee
+  form(action=`/update/${employee._id}`, method="POST")
+    label ID:
+    input(type="number", name="E_ID", value=employee.E_ID, required)
+    br
+    label Name:
+    input(type="text", name="E_Name", value=employee.E_Name, required)
+    br
+    label Email:
+    input(type="text", name="E_Email", value=employee.E_Email, required)
+    br
+    label Number:
+    input(type="number", name="E_Number", value=employee.E_Number, required)
+    br
+    label Gender:
+    input(type="text", name="E_Gender", value=employee.E_Gender, required)
+    br
+    label Dept:
+    input(type="text", name="E_Dept", value=employee.E_Dept, required)
+    br
+    label Location:
+    input(type="text", name="E_Location", value=employee.E_Location, required)
+    br
+    button(type="submit") Update
